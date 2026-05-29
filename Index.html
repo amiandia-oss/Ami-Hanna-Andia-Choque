@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ami Hanna Andia Choque | Estudiante de Administración de Negocios</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;          /* Fondo blanco total */
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2a3e;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        /* Contenedor principal ancho cómodo */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 1.5rem;
+        }
+
+        /* Tipografía */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #0b2b33;
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2c7a6e;
+            border-left: 4px solid #2c7a6e;
+            padding-left: 0.8rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .section {
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #155f5c;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.4rem;
+        }
+
+        .presentacion {
+            background: #f9fbfd;
+            padding: 1.2rem 1.4rem;
+            border-radius: 20px;
+            margin: 1rem 0 1.2rem 0;
+            border: 1px solid #eef2f6;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #1f3b44;
+        }
+
+        .presentacion a {
+            color: #2c7a6e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #9bc0b7;
+        }
+
+        .presentacion a:hover {
+            color: #145c52;
+            border-bottom: 1px solid #145c52;
+        }
+
+        /* Perfil con viñetas tipo badges */
+        .perfil-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .perfil-item {
+            background: #eef5f2;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #145c52;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Lista de cursos */
+        .cursos-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .curso {
+            background: #ffffff;
+            border: 1px solid #e2edf0;
+            border-radius: 16px;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+            transition: all 0.2s;
+        }
+
+        .curso:hover {
+            background: #fefefd;
+            border-color: #cbdde2;
+        }
+
+        .curso-nombre {
+            font-weight: 700;
+            color: #1a4e5c;
+            font-size: 1rem;
+        }
+
+        .curso-profesor {
+            font-size: 0.85rem;
+            color: #5f7f8c;
+            background: #f0f6f9;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+        }
+
+        /* Estilo para el enlace del profesor */
+        .profesor-link {
+            color: #2c7a6e;
+            text-decoration: none;
+            border-bottom: 1px dotted #9bc0b7;
+            transition: all 0.2s ease;
+        }
+
+        .profesor-link:hover {
+            color: #145c52;
+            border-bottom: 1px solid #145c52;
+            background-color: #f0f7f5;
+        }
+
+        /* pie de contacto simple */
+        .contacto-simple {
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            text-align: center;
+            border-top: 1px solid #e2eef2;
+            font-size: 0.85rem;
+            color: #5d7e8a;
+        }
+
+        .contacto-simple a {
+            color: #2c7a6e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contacto-simple a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 1.8rem;
+            font-size: 0.75rem;
+            color: #98aeb7;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .curso {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Encabezado -->
+    <h1>Ami Hanna Andia Choque</h1>
+    <div class="subtitle">Estudiante de Administración de Negocios</div>
+
+    <!-- Presentación (con link a UCSP) -->
+    <div class="presentacion">
+        <strong>📌 Presentación</strong><br>
+        Hola, soy alumna de la <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener noreferrer">Universidad Católica San Pablo (UCSP)</a> 
+        y actualmente curso el tercer semestre de la carrera de Administración de Negocios. Me interesan las finanzas, inversiones y el análisis 
+        de problemáticas con el fin de darles soluciones innovadoras. Me considero una estudiante proactiva, responsable y participativa, 
+        con una actitud orientada a fortalecer el aprendizaje y contribuir al progreso de la comunidad.
+    </div>
+
+    <!-- Sección: Rendimiento Académico y Perfil -->
+    <div class="section">
+        <div class="section-title">🎯 Perfil del Estudiante</div>
+        <div class="perfil-lista">
+            <span class="perfil-item">📊 Herramientas digitales</span>
+            <span class="perfil-item">📑 Elaboración de presentaciones</span>
+            <span class="perfil-item">🤝 Trabajo en equipo</span>
+            <span class="perfil-item">🌍 Adaptabilidad</span>
+            <span class="perfil-item">📈 Gestión de proyectos</span>
+            <span class="perfil-item">❤️ Voluntariados</span>
+            <span class="perfil-item">💹 Interés en inversiones</span>
+        </div>
+        <p style="margin-top: 1rem; color: #2f5563; font-size: 0.95rem;">
+            Facilidad para trabajar en equipo y adaptarse a diferentes entornos académicos y organizativos. 
+            Interés en la gestión de proyectos, voluntariados e inversiones.
+        </p>
+    </div>
+
+    <!-- Sección: Cursos -->
+    <div class="section">
+        <div class="section-title">📚 Cursos Destacados</div>
+        <div class="cursos-grid">
+            <div class="curso">
+                <span class="curso-nombre">Contabilidad</span>
+                <span class="curso-profesor">Amparo Isela Chalco Chávez</span>
+            </div>
+            <div class="curso">
+                <span class="curso-nombre">Análisis Financiero</span>
+                <span class="curso-profesor">Maria Belen Bocchio Linares</span>
+            </div>
+            <div class="curso">
+                <span class="curso-nombre">Cálculo en una variable</span>
+                <span class="curso-profesor">Maribel Marianela Quiroz Zegarra</span>
+            </div>
+            <div class="curso">
+                <span class="curso-nombre">Liderazgo</span>
+                <span class="curso-profesor">Susan Fiorella Aragón Aragón</span>
+            </div>
+            <div class="curso">
+                <span class="curso-nombre">Pensamiento Computacional</span>
+                <span class="curso-profesor">
+                    <a href="https://pe.linkedin.com/in/ecuadrosv" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Ernesto Cuadros Vargas
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pequeño bloque de contacto (opcional pero útil, sin sobrecargar) -->
+    <div class="contacto-simple">
+        📧 <strong>Contacto académico:</strong> <a href="mailto:ami.andia@ucsp.edu.pe">ami.andia@ucsp.edu.pe</a> &nbsp;|&nbsp;
+        🔗 <a href="#">LinkedIn (en construcción)</a> &nbsp;|&nbsp;
+        🏫 <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener noreferrer">UCSP</a>
+    </div>
+
+    <footer>
+        © 2025 Ami Hanna Andia Choque · Estudiante de Administración de Negocios · Todos los derechos reservados.
+    </footer>
+</div>
+</body>
+</html>
