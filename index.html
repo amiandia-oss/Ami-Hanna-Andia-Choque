@@ -13,14 +13,13 @@
         }
 
         body {
-            background: white;          /* Fondo blanco total */
+            background: white;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             color: #1e2a3e;
             line-height: 1.5;
             padding: 2rem 1rem;
         }
 
-        /* Contenedor principal ancho cómodo */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -31,7 +30,6 @@
             padding: 2rem 2rem 1.5rem;
         }
 
-        /* Tipografía */
         h1 {
             font-size: 2.2rem;
             font-weight: 700;
@@ -85,7 +83,6 @@
             border-bottom: 1px solid #145c52;
         }
 
-        /* Perfil con viñetas tipo badges */
         .perfil-lista {
             display: flex;
             flex-wrap: wrap;
@@ -105,7 +102,6 @@
             gap: 6px;
         }
 
-        /* Lista de cursos */
         .cursos-grid {
             display: flex;
             flex-direction: column;
@@ -144,7 +140,6 @@
             border-radius: 30px;
         }
 
-        /* Estilo para el enlace del profesor */
         .profesor-link {
             color: #2c7a6e;
             text-decoration: none;
@@ -158,7 +153,79 @@
             background-color: #f0f7f5;
         }
 
-        /* pie de contacto simple */
+        /* Estilo para la sección de música */
+        .musica-destacados {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #2f5563;
+        }
+
+        .musica-destacados span {
+            background: #f0f6f9;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #1a4e5c;
+            border: 1px solid #e2edf0;
+        }
+
+        /* Estilo para imágenes */
+        .galeria-imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+
+        .galeria-imagenes img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #e2edf0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-height: 200px;
+            object-fit: cover;
+            background: #f9fbfd;
+        }
+
+        /* Estilo para compañeros */
+        .compañeros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .compañero-item {
+            background: #f9fbfd;
+            border: 1px solid #e2edf0;
+            border-radius: 12px;
+            padding: 0.6rem 1rem;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .compañero-item:hover {
+            background: #f0f6f9;
+            border-color: #cbdde2;
+        }
+
+        .compañero-item a {
+            color: #2c7a6e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #9bc0b7;
+        }
+
+        .compañero-item a:hover {
+            color: #145c52;
+            border-bottom: 1px solid #145c52;
+        }
+
         .contacto-simple {
             margin-top: 2.5rem;
             padding-top: 1rem;
@@ -185,7 +252,6 @@
             color: #98aeb7;
         }
 
-        /* Responsive */
         @media (max-width: 700px) {
             .container {
                 padding: 1.5rem;
@@ -197,6 +263,9 @@
                 flex-direction: column;
                 gap: 6px;
             }
+            .compañeros-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -206,7 +275,7 @@
     <h1>Ami Hanna Andia Choque</h1>
     <div class="subtitle">Estudiante de Administración de Negocios</div>
 
-    <!-- Presentación (con link a UCSP) -->
+    <!-- Presentación -->
     <div class="presentacion">
         <strong>📌 Presentación</strong><br>
         Hola, soy alumna de la <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener noreferrer">Universidad Católica San Pablo (UCSP)</a> 
@@ -215,7 +284,7 @@
         con una actitud orientada a fortalecer el aprendizaje y contribuir al progreso de la comunidad.
     </div>
 
-    <!-- Sección: Rendimiento Académico y Perfil -->
+    <!-- Perfil -->
     <div class="section">
         <div class="section-title">🎯 Perfil del Estudiante</div>
         <div class="perfil-lista">
@@ -233,25 +302,41 @@
         </p>
     </div>
 
-    <!-- Sección: Cursos -->
+    <!-- Cursos -->
     <div class="section">
         <div class="section-title">📚 Cursos Destacados</div>
         <div class="cursos-grid">
             <div class="curso">
-                <span class="curso-nombre">Contabilidad</span>
-                <span class="curso-profesor">Amparo Isela Chalco Chávez</span>
+                <span class="curso-nombre">Comportamiento del Consumidor</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/fabiola-postigo-mendoza-53418566/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Fabiola Postigo Mendoza
+                    </a>
+                </span>
             </div>
             <div class="curso">
                 <span class="curso-nombre">Análisis Financiero</span>
-                <span class="curso-profesor">Maria Belen Bocchio Linares</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/mar%C3%ADa-bel%C3%A9n-bocchio-linares-96846035/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Maria Belen Bocchio Linares
+                    </a>
+                </span>
             </div>
             <div class="curso">
                 <span class="curso-nombre">Cálculo en una variable</span>
-                <span class="curso-profesor">Maribel Marianela Quiroz Zegarra</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/maribel-marianela-8453a61a7/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Maribel Marianela Quiroz Zegarra
+                    </a>
+                </span>
             </div>
             <div class="curso">
                 <span class="curso-nombre">Liderazgo</span>
-                <span class="curso-profesor">Susan Fiorella Aragón Aragón</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/pablo-nu%C3%B1ez-saija/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Pablo Nuñes Saija
+                    </a>
+                </span>
             </div>
             <div class="curso">
                 <span class="curso-nombre">Pensamiento Computacional</span>
@@ -261,18 +346,119 @@
                     </a>
                 </span>
             </div>
+            <div class="curso">
+                <span class="curso-nombre">Matemáticas Financieras</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/mar%C3%ADa-del-carmen-delgado-torres-76860446/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        María del Carmen Delgado Torres
+                    </a>
+                </span>
+            </div>
+            <div class="curso">
+                <span class="curso-nombre">Estadística y Probabilidad</span>
+                <span class="curso-profesor">
+                    <a href="https://www.linkedin.com/in/renzorivera/" target="_blank" rel="noopener noreferrer" class="profesor-link">
+                        Carlos Renzo Rivera Calcina
+                    </a>
+                </span>
+            </div>
         </div>
     </div>
 
-    <!-- Pequeño bloque de contacto (opcional pero útil, sin sobrecargar) -->
+    <!-- Trayectoria Musical -->
+    <div class="section">
+        <div class="section-title">🎻 Trayectoria Musical</div>
+        <p style="color: #1f3b44; margin-bottom: 0.5rem;">
+            <strong>🎵 Violinista desde hace 9 años.</strong> Amo la música y mi instrumento ha sido mi compañero en cada etapa.
+            Formé parte de <strong><a href="https://sinfoniaporelperu.org/gala-sinfonica-coral-nucleoarequipa/" target="_blank" rel="noopener noreferrer" class="profesor-link">Sinfonía por el Perú - Núcleo Arequipa</a></strong> (orquesta infantil y juvenil) hasta 2025, bajo la dirección de 
+            <a href="https://www.linkedin.com/in/raul-pimentel-meza-b182041a6/" target="_blank" rel="noopener noreferrer" class="profesor-link">Raúl Pimentel Meza</a>, 
+            participando en múltiples conciertos en Ilo, Moquegua y Arequipa.
+        </p>
+        <p style="color: #1f3b44; margin-bottom: 0.5rem;">
+            <strong>🎼 Conciertos destacados:</strong> PERUMIN (convención minera), con obras variadas del Perú y extranjeras.
+        </p>
+        <p style="color: #1f3b44; margin-bottom: 0.5rem;">
+            <strong>🎻 Repertorio en solitario:</strong> Obras de Tchaikovsky, Bach, Vivaldi, entre otros.
+        </p>
+        <p style="color: #1f3b44;">
+            Actualmente soy parte de la <strong>Orquesta Sinfónica Juvenil de la UCSP</strong>, con un repertorio avanzado, 
+            dirigida por <a href="https://www.linkedin.com/in/augusto-vera-bejar-23b85378/" target="_blank" rel="noopener noreferrer" class="profesor-link">Augusto Vera Bejar</a>. 
+            Para mí, la música es una pasión que complementa mi formación y me llena de energía.
+        </p>
+
+        <!-- Galería de imágenes -->
+        <div class="galeria-imagenes">
+            <img src="sinfonia-banner.jpg" 
+                 alt="Banner PERUMIN - Sinfonía por el Perú" 
+                 title="PERUMIN 35 Convención Minera">
+
+            <img src="catedral-concierto.jpg" 
+                 alt="Concierto en la Catedral de Arequipa" 
+                 title="Concierto en la Catedral - Orquesta Sinfónica Juvenil UCSP">
+
+            <img src="https://sinfoniaporelperu.org/wp-content/uploads/2022/09/Perumin-SPP-3.jpeg" 
+                 alt="Logo PERUMIN 35 - Sinfonía por el Perú" 
+                 title="PERUMIN 35 Convención Minera - Sinfonía por el Perú">
+        </div>
+
+        <!-- Obras destacadas con compositores -->
+        <div class="musica-destacados">
+            <span>🎶 Alcatraz (Fritz Neuböck / Andrew David Perkins)</span>
+            <span>🎶 Danzón No 2 (Arturo Márquez)</span>
+            <span>🎶 La Flor de la Canela (Chabuca Granda)</span>
+            <span>🎶 Hanac Pachap (Anónimo / Juan Pérez Bocanegra)</span>
+            <span>🎶 Dvorak Fifth Symphony "New World" (Antonín Dvořák)</span>
+            <span>🎶 Finlandia op 26 (Jean Sibelius)</span>
+            <span>🎶 Jupiter Bringer of Jollity (Gustav Holst)</span>
+            <span>🎶 El Cóndor Pasa (Daniel Alomía Robles)</span>
+            <span>🎶 Libertango (Astor Piazzolla)</span>
+            <span>🎶 Traviata de Verdi (Giuseppe Verdi)</span>
+            <span>🎶 Sanson y Dalila (Camille Saint-Saëns)</span>
+            <span>🎶 Waltz of Flowers (Tchaikovsky)</span>
+            <span>🎶 Pas de deux (Tchaikovsky)</span>
+            <span>🎶 Concerto N°1 Bach (J.S. Bach)</span>
+            <span>🎶 Eine Kleine Nachtmusik K 525 (W.A. Mozart)</span>
+            <span>🎶 Winter (Vivaldi)</span>
+            <span>🎶 Concierto en la menor (Vivaldi)</span>
+            <span>🎶 Por una Cabeza (Carlos Gardel)</span>
+        </div>
+    </div>
+
+    <!-- Compañeros -->
+    <div class="section">
+        <div class="section-title">👥 Compañeros</div>
+        <div class="compañeros-grid">
+            <div class="compañero-item"><a href="https://gabriel-flores-ll.github.io/" target="_blank" rel="noopener noreferrer">Gabriel Fabrizio Flores Llancaya</a></div>
+            <div class="compañero-item"><a href="https://w4nd4r1.github.io/Ariana-Yasmin-Delgado-Arce/" target="_blank" rel="noopener noreferrer">Ariana Yasmín Delgado Arce</a></div>
+            <div class="compañero-item"><a href="https://aaronhumpiri.github.io/" target="_blank" rel="noopener noreferrer">Aaron Humpiri Obregon</a></div>
+            <div class="compañero-item"><a href="https://kenya-sq.github.io/Kenya-Shupingahua-Quiroz/" target="_blank" rel="noopener noreferrer">Kenya Magdiel Shupingahua Quiroz</a></div>
+            <div class="compañero-item"><a href="https://faro-m.github.io/Pagina-Web-UCSP/" target="_blank" rel="noopener noreferrer">Farid Aarom Morales Gonzales</a></div>
+            <div class="compañero-item"><a href="https://camilasherlyn.github.io/uscpcienciascami/" target="_blank" rel="noopener noreferrer">Camila Sherlyn Ayamamani Hinojosa</a></div>
+            <div class="compañero-item"><a href="https://thepandoredxxo.github.io/Alejandro-Jacob-Valencia-Delgado-pagina-web-ICC-san-pablo/" target="_blank" rel="noopener noreferrer">Alejandro Jacob Valencia Delgado</a></div>
+            <div class="compañero-item"><a href="https://yeniferhuarachi-code.github.io/yeniferhuarachihalanoca.github.io/" target="_blank" rel="noopener noreferrer">Yenifer Rocio Huarachi Halanoca</a></div>
+            <div class="compañero-item"><a href="https://yerriflores.github.io/" target="_blank" rel="noopener noreferrer">Yerri Tony Flores Velasquez</a></div>
+            <div class="compañero-item"><a href="https://franmnm.github.io/" target="_blank" rel="noopener noreferrer">Franco Yerix Aguilar Yucra</a></div>
+            <div class="compañero-item"><a href="https://annyaguilar-hub.github.io/anny_aguilar_cv/" target="_blank" rel="noopener noreferrer">Aguilar Zambrano Anny Briyid</a></div>
+            <div class="compañero-item"><a href="https://angelfabianramosmunoz.github.io/" target="_blank" rel="noopener noreferrer">Angel Fabian Ramos Muñoz</a></div>
+            <div class="compañero-item"><a href="https://diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/" target="_blank" rel="noopener noreferrer">Diego Alonso Aragon Mamani</a></div>
+            <div class="compañero-item"><a href="https://timely-crepe-7fb679.netlify.app/" target="_blank" rel="noopener noreferrer">Vivian Elizabeth Rivera Cosi</a></div>
+            <div class="compañero-item"><a href="https://paputilin123.github.io/cvproyectnew/" target="_blank" rel="noopener noreferrer">Cristopher Maqquera Machaca</a></div>
+            <div class="compañero-item"><a href="https://nicocespedes0909-jpg.github.io/Nicole-Estefany-Cespedes-Conchacalle.github.io/" target="_blank" rel="noopener noreferrer">Nicole Estefany Cespedes Conchacalle</a></div>
+            <div class="compañero-item"><a href="https://michaelcadena-lp.github.io/" target="_blank" rel="noopener noreferrer">Michael Fabian Cadena Candia</a></div>
+            <div class="compañero-item"><a href="https://miguelezz.github.io/miguel-angel-atawi-zuniga-chacon/" target="_blank" rel="noopener noreferrer">Miguel Zuñiga Chacon</a></div>
+            <div class="compañero-item"><a href="https://mirellasanchez.github.io/mirella-rossy-sanchez-quispe/" target="_blank" rel="noopener noreferrer">Mirella Rossy Sanchez Quispe</a></div>
+        </div>
+    </div>
+
+    <!-- Contacto -->
     <div class="contacto-simple">
         📧 <strong>Contacto académico:</strong> <a href="mailto:ami.andia@ucsp.edu.pe">ami.andia@ucsp.edu.pe</a> &nbsp;|&nbsp;
-        🔗 <a href="#">LinkedIn (en construcción)</a> &nbsp;|&nbsp;
+        🔗 <a href="https://www.linkedin.com/in/ami-hanna-andia-choque-604330419/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;|&nbsp;
         🏫 <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener noreferrer">UCSP</a>
     </div>
 
     <footer>
-        © 2025 Ami Hanna Andia Choque · Estudiante de Administración de Negocios · Todos los derechos reservados.
+        © 2026 Ami Hanna Andia Choque · Estudiante de Administración de Negocios · Todos los derechos reservados.
     </footer>
 </div>
 </body>
